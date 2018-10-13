@@ -1796,12 +1796,11 @@ cfg.groups = {
   },
   
   -- garimpos
-  ["Minerador de Ouro"] = {
-    _config = { gtype = "job"},
-    "pegar.ouro",
-    "process.ouro",
-	"bolsafamilia.paycheck",
-    "sell.ouro"
+   ["Minerador de Ouro"] = {
+    _config = { gtype = "job" },
+	"harvest.ouro",
+	"process.ouro",
+	"venda.ouro"
   },
   ["Minerador de Diamante"] = {
     _config = { gtype = "job"},
@@ -1892,7 +1891,8 @@ cfg.selectors = {
 	"Chaveiro",
 	"Jornalista",
 	"Prostituta",
-	"Desempregado"
+	"Desempregado",
+        "Minerador de Ouro"
   },
   ["Empregos Ilegais"] = {
     _config = {x = 707.324462890625, y = -966.986511230469, z = 30.4128551483154, blipid = 351, blipcolor = 49},
