@@ -302,6 +302,73 @@ cfg.item_transformers = {
       }
     }
   },
+  -- CAMPO DE OURO
+  {
+    name="Campo de Ouro", -- Nome do menu
+    permissions = {"harvest.ouro"}, -- Você pode adicionar permissões
+    r=0,g=200,b=0, -- cor
+    max_units=2000000,
+    units_per_minute=5,
+    x=-554.33685302734,y=5324.029296875,z=73.599601745605, -- Localização
+    radius=7.5, height=1.5, -- area
+    recipes = {
+      ["Colher"] = { -- Nome da ação
+        description="pepita de ouro.", -- Descrição do produto a se colher
+        in_money=50, -- Dinheiro dado por unidade
+        out_money=0, -- Dinheiro ganho por unidade
+        reagents={}, -- Itens colhidos por unidade
+        products={ -- Nome do produto fornecido por unidade
+          ["pepitadeouro"] = 1
+        }
+      }
+    }
+  }, 
+  -- PROCESSADOR DE OURO
+  {
+    name="Processamento de ouro", -- menu name
+    permissions = {"process.ouro"}, -- you can add permissions
+    r=0,g=200,b=0, -- cor do menu
+    max_units=2000000, -- unidades maximas do item
+    units_per_minute=5, -- unidades que o transformador ganha de volta por minuto
+    x=-1514.6323242188,y=1514.2767333984,z=115.28859710693, -- pos
+    radius=2.5, height=1.5, -- area
+    recipes = { -- items do menu
+      ["Processar"] = { -- action name
+        description="Processar ouro.", -- action description
+        in_money=0, -- money taken per unit
+        out_money=0, -- money earned per unit
+        reagents={  -- items taken per unit
+          ["pepitadeouro"] = 1
+	    },
+        products={ -- items given per unit
+          ["ouro"] = 2
+	    }
+      }
+    }
+  },
+  -- VENDER OURO
+  {
+    name="Vender Ouro", -- menu name
+    permissions = {"venda.ouro"}, -- you can add permissions
+    r=0,g=200,b=0, -- cor do menu
+    max_units=200, -- unidades maximas do item
+    units_per_minute=20, -- unidades que o transformador ganha de volta por minuto
+    x=-817.21002197266,y=-798.64349365234,z=19.556680679321, -- pos
+    radius=2.5, height=1.5, -- area
+    recipes = { -- items do menu
+      ["Vender Ouro"] = { -- action name
+        description="Vender ouro", -- action description
+        in_money=0, -- money taken per unit
+        out_money=430, -- money earned per unit
+        reagents={  -- items taken per unit
+          ["ouro"] = 1
+      },
+        products={ -- items given per unit
+          ["dirty_money"] = 0
+        }
+      }
+    }
+  },	
   -- PESCADOR DE TARTARUGA
   {
     name="Pescador de Tartaruga", -- menu name
@@ -375,7 +442,7 @@ cfg.item_transformers = {
     name="Cartões Clonáveis", -- Nome do menu
     permissions = {"pick.toclonecards"}, -- you can add permissions
     r=0,g=200,b=0, -- cor
-    max_units=200,
+    max_units=2000000,
     units_per_minute=2,
     x=261.61892700195,y=204.29025268555,z=110.28720855713, -- Localização    
     radius=2.5, height=1.5, -- area
@@ -397,7 +464,7 @@ cfg.item_transformers = {
     name="Clonagem de Cartões", -- menu name
     permissions = {"clone.cards"}, -- you can add permissions
     r=0,g=200,b=0, -- cor do menu
-    max_units=200, -- unidades maximas do item
+    max_units=20000000, -- unidades maximas do item
     units_per_minute=20, -- unidades que o transformador ganha de volta por minuto
     x=-1054.0205078125,y=-230.26893615723,z=44.020957946777, -- pos 
     radius=2.5, height=1.5, -- area
@@ -421,7 +488,7 @@ cfg.item_transformers = {
     name="Cartões Clonados", -- menu name
     permissions = {"sell.clonedcards"}, -- you can add permissions
     r=0,g=200,b=0, -- cor do menu
-    max_units=200, -- unidades maximas do item
+    max_units=2000000, -- unidades maximas do item
     units_per_minute=20, -- unidades que o transformador ganha de volta por minuto
     x=-621.35168457031,y=36.309566497803,z=43.566032409668, -- pos 
     radius=2.5, height=1.5, -- area
